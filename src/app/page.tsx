@@ -87,9 +87,9 @@ export default function Home() {
 
       <div className="flex gap-8 md:gap-20 p-6 flex-col items-center lg:flex-row  my-20">
         <div className="">
-          <Image src="/office-table.png" width={800} height={800} alt="mockup" className="rounded-xl" sizes="(max-width: 640px) 100vw, 50vw" />
+          <Image src="/office-table.png" width={700} height={800} alt="mockup" className="rounded-xl" sizes="(max-width: 640px) 100vw, 50vw" />
         </div>
-        <div className="lg:w-[25rem]">
+        <div className="lg:w-[30rem]">
           <h3 className="text-3xl font-bold ">About Fremont Inspire Youth Foundation</h3>
           <p className="text-lg text-neutral-600 mt-6">Our nonprofit organization serves the Alameda County community in California. We focus on teaching the younger generation different useful subjects.</p>
           <p className="text-lg text-neutral-600 mt-4">We strive to uplift and empower individuals every day.</p>
