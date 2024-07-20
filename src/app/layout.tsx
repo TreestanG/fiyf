@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     siteName: "Fremont Inspire Youth Foundation",
     title: "Fremont Inspire Youth Foundation: teaching the next generation.",
     description: "We help our younger generation by teaching Kindergarten students the material they need to know",
-    /* images: [
+    images: [
       {
-        url: '/og-image.png',
+        url: '/fyif.png',
         width: 1200,
         height: 630,
         alt: "Fremont Inspire Youth Foundation",
       },
-    ], */
+    ],
   }
 };
 

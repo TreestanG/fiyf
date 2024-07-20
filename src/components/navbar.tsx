@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import React, { useState } from "react";
 import Link from "next/link";
 import { IconMenu2, IconX } from "@tabler/icons-react";
+import Image from "next/image";
 
 export default function NavBar({ className }: { className?: string }) {
     const [active, setActive] = useState<string | null>(null);
@@ -14,7 +15,10 @@ export default function NavBar({ className }: { className?: string }) {
         <div className={cn("fixed top-0 w-full mx-auto z-50 bg-white shadow-md ", showMenu ? "inset-0 " : "")}>
             <div className={cn("relative w-full justify-between p-8 flex flex-col lg:flex-row h-full", className)}>
                 <div className="flex w-full justify-between">
-                    <Link href="/"><span className="text-xl lg:text-2xl font-bold text-neutral-700">Fremont Inspire Youth Foundation</span></Link>
+                    <Link className="flex gap-4 items-center" href="/">
+                        <Image src="/fyif.png" width={50} height={50} alt="Fremont Inspire Youth Foundation" />
+                        <span className="text-xl lg:text-2xl font-bold text-neutral-700">Fremont Inspire Youth Foundation</span>
+                    </Link>
                     {
                         showMenu ? <IconX size={36} className={`hover:cursor-pointer block lg:hidden`} onClick={() => { setShowMenu(!showMenu) }} /> : <IconMenu2 size={36} className={`hover:cursor-pointer block lg:hidden`} onClick={() => { setShowMenu(!showMenu) }} />
                     }
@@ -30,7 +34,7 @@ export default function NavBar({ className }: { className?: string }) {
                 }
 
             </div>
-        </div>
+        </div >
 
     )
 }
