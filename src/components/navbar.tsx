@@ -16,7 +16,7 @@ export default function NavBar({ className }: { className?: string }) {
             <div className={cn("relative w-full justify-between p-8 flex flex-col lg:flex-row h-full", className)}>
                 <div className="flex w-full justify-between">
                     <Link className="flex gap-4 items-center" href="/">
-                        <Image src="/fyif.png" width={50} height={50} alt="Fremont Inspire Youth Foundation" />
+                        <Image src="/fiyf.jpg" width={50} height={50} alt="Fremont Inspire Youth Foundation" />
                         <span className="text-xl lg:text-2xl font-bold text-neutral-700">Fremont Inspire Youth Foundation</span>
                     </Link>
                     {

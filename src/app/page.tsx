@@ -18,6 +18,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import Link from "next/link";
 
 const formSchema = z.object({
   firstName: z.string()
@@ -78,7 +79,9 @@ export default function Home() {
           <span className=" text-center tracking-wide leading-loose pt-8">Our mission is to give all students the chance to learn and fulfil their educational ambitions. We want students to feel like they have a friend and a mentor who would guide them through their educational journey. We also want to support the teachers in their ability to help each individual student in their classrooms.</span>
           <div className="flex gap-4 pt-6">
           </div>
-          <Button variant="outline" className="mt-4 text-black">Learn More</Button>
+          <Link href="#faq">
+            <Button variant="outline" className="mt-4 text-black">Learn More</Button>
+          </Link>
 
         </div>
       </div>
@@ -94,7 +97,9 @@ export default function Home() {
           <p className="text-lg text-neutral-600 mt-6">Our nonprofit organization serves the Alameda County community in California. We focus on teaching the younger generation different useful subjects.</p>
           <p className="text-lg text-neutral-600 mt-4">We strive to uplift and empower individuals every day.</p>
 
-          <Button variant="default" className="mt-4 w-full lg:w-auto">Contact</Button>
+          <Link href="mailto:fremontinspire@gmail.com">
+            <Button variant="default" className="mt-4 w-full lg:w-auto">Contact</Button>
+          </Link>
         </div>
       </div>
       <div className="bg-background w-full px-16 md:px-20 my-20">
@@ -117,11 +122,12 @@ export default function Home() {
         </Carousel>
       </div>
 
-      <div className="w-full lg:w-1/2 text-neutral-800 py-20 p-6">
+      <div className="w-full lg:w-1/2 text-neutral-800 py-20 p-6" id="faq">
         <h2 className="text-4xl font-bold relative">FAQ&apos;s</h2>
 
         <h3 className="text-xl lg:text-2xl font-bold mt-8">What is the Fremont Inspire Youth Foundation?</h3>
-        <span className="text-lg text-neutral-700 leading-relaxed tracking-wide">Fremont Inspire Youth Foundation is an educational organization which prioritizes the development of elementary school students&apos; educational quality. The FIYF is a teacher support program that focuses on giving kids the quality help that they need individually to achieve academic success. </span>
+        <span className="text-lg text-neutral-700 leading-relaxed tracking-wide">Fremont Inspire Youth Foundation is an educational organization which prioritizes the development of elementary school students&apos; educational quality. The FIYF is a teacher support program that focuses on giving kids the quality help that they need individually to achieve academic success.
+</span>
         <h3 className="text-xl lg:text-2xl font-bold mt-4 ">What does this foundation do?</h3>
         <span className="text-lg text-neutral-700 leading-relaxed tracking-wide">This foundation helps the fellow kindergarten students of James Leitch Elementary gain a better understanding of the lessons taught during school. Now that they have a full day of school, it can be difficult for just one teacher to teach twenty-four students alone. This system doesn’t allow students to fully comprehend the concepts being taught. To assist  their teachers, highschooler mentors will work one on one with a student once every week to provide a better understanding of the concept. Highschool mentors will support the students for the whole school year.</span>
         <h3 className="text-xl lg:text-2xl font-bold mt-4 ">What lessons will be covered?</h3>
@@ -135,8 +141,8 @@ export default function Home() {
           <li>You will be provided a slideshow of material to cover in each zoom call</li>
         </ul>
       </div>
-        
-      
+
+
       <div className="w-full bg-blue-200 flex justify-center">
         <div className='flex justify-center gap-8 flex-col lg:flex-row lg:px-8 items-center mb-20 p-6 md:p-20'>
           <div className=' w-full lg:w-[35rem] '>
@@ -176,7 +182,7 @@ export default function Home() {
                       )}
                     />
                   </div>
-                  
+
                   <FormField
                     control={form.control}
                     name="message"
@@ -200,7 +206,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      
+
 
 
       {/* Features */}
